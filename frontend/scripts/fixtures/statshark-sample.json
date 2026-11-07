@@ -1,0 +1,424 @@
+{
+ "basic": {
+  "name": "ANKA",
+  "tag": "-ANK4-",
+  "type": "normal",
+  "status": "open",
+  "memberCount": 128,
+  "memberLimit": 128,
+  "region": "Türkiye",
+  "creationDate": 1765303798,
+  "creatorUid": "149709052",
+  "motto": "<color=#FF0000> € TALIH CESURLARDAN YANADIR € </color>",
+  "description": "<color=#FFD000><b>Filo savaşı odaklı bir filoyuz. Tamamen doluysak bile başvuru yapmaktan çekinmeyin.  Alımlar Discord'dan.</b></color>\n<color=#7289da>DISCORD: discord.gg/ankawt</color>",
+  "activityPoints": 78132,
+  "clanActivityByPeriods": 216088,
+  "maxClanActivity": 20000,
+  "squadronRating": 20455000,
+  "groundKills": 0,
+  "wins": 0,
+  "playtimeMinutes": 0,
+  "totalBattles": 0,
+  "airKills": 0,
+  "totalSquadRating": 0,
+  "totalDeaths": 0,
+  "lastUpdated": 1793977688,
+  "iconFileName": "",
+  "backgroundFileName": ""
+ },
+ "players": [
+  {
+   "name": "the-maestro",
+   "id": "149709052",
+   "joinDate": 1765303798,
+   "role": "0",
+   "activity": {
+    "periodActivity": {
+     "20761": 360,
+     "20758": 360,
+     "20755": 360,
+     "20752": 360,
+     "20749": 360,
+     "20746": 360,
+     "20743": 360,
+     "20740": 360,
+     "20737": 360,
+     "20734": 360
+    },
+    "current": 0,
+    "total": 3960
+   },
+   "rating": 0,
+   "sr1rating": {
+    "air_arcade": {
+     "total": {
+      "wt8": 1149.3992617871281,
+      "interaction": 1126.3297978269336,
+      "total_games": 443,
+      "general_stats": {
+       "kills": 0.60836333,
+       "position": 0.709377,
+       "win": 0.5711061,
+       "score": 1635.9865
+      }
+     }
+    },
+    "air_realistic": {
+     "monthly": {
+      "wt8": 732.1201077069777,
+      "interaction": 597.0794171202632,
+      "total_games": 366,
+      "general_stats": {
+       "kills": 0.42465752,
+       "position": 0.39466667,
+       "win": 0.43715847,
+       "score": 474.4317
+      }
+     },
+     "total": {
+      "wt8": 927.3443366132478,
+      "interaction": 862.3799363247143,
+      "total_games": 4791,
+      "general_stats": {
+       "kills": 0.450952,
+       "position": 0.47140828,
+       "win": 0.4802755,
+       "score": 608.7646
+      }
+     }
+    },
+    "air_simulation": {},
+    "tank_arcade": {
+     "total": {
+      "wt8": 872.6465225149996,
+      "interaction": 775.7410040555704,
+      "total_games": 579,
+      "general_stats": {
+       "kills": 0.5905956,
+       "position": 0.4807185,
+       "win": 0.43523315,
+       "score": 1088.4421
+      }
+     }
+    },
+    "tank_realistic": {
+     "total": {
+      "wt8": 861.1849122478561,
+      "interaction": 714.6073287710786,
+      "total_games": 11239,
+      "general_stats": {
+       "kills": 0.38670743,
+       "position": 0.45880097,
+       "win": 0.49061304,
+       "score": 942.5874
+      }
+     }
+    },
+    "tank_simulation": {},
+    "test_ship_arcade": {
+     "monthly": {
+      "wt8": 836.087922719134,
+      "interaction": 667.2694855997838,
+      "total_games": 150,
+      "general_stats": {
+       "kills": 0.6263048,
+       "position": 0.54134,
+       "win": 0.5133333,
+       "score": 1206.0466
+      }
+     },
+     "total": {
+      "wt8": 949.3742974664408,
+      "interaction": 852.4896940991061,
+      "total_games": 404,
+      "general_stats": {
+       "kills": 0.7183521,
+       "position": 0.5774158,
+       "win": 0.5247525,
+       "score": 1272.8218
+      }
+     }
+    },
+    "test_ship_realistic": {},
+    "helicopter_arcade": {}
+   }
+  },
+  {
+   "name": "Alphaツ#1",
+   "id": "131062009",
+   "joinDate": 1765304149,
+   "role": "3",
+   "activity": {
+    "periodActivity": {
+     "20761": 360,
+     "20758": 68,
+     "20752": 187,
+     "20749": 73,
+     "20746": 233,
+     "20743": 360,
+     "20740": 173,
+     "20737": 360,
+     "20731": 51
+    },
+    "current": 0,
+    "total": 1865
+   },
+   "rating": 0,
+   "sr1rating": {
+    "air_realistic": {
+     "total": {
+      "wt8": 1134.9222233303735,
+      "original_wt8": 1134.9222233303735,
+      "interaction": 1212.8802966970932,
+      "killsContributionPercentage": 39.764347961325015,
+      "killsVsOtherCategoriesAverageGap": -13.19958604101452,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 0.6080338,
+       "position": 0.5575957,
+       "win": 0.49677536,
+       "score": 778.40656
+      },
+      "total_games": 11009
+     }
+    },
+    "air_simulation": {
+     "monthly": {
+      "wt8": 1725.8294052412255,
+      "original_wt8": 1725.8294052412255,
+      "interaction": 2458.8178117718003,
+      "killsContributionPercentage": 68.26337738957065,
+      "killsVsOtherCategoriesAverageGap": 50.790486834415795,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 0.7363184,
+       "position": 0.47071567,
+       "win": 0.5,
+       "score": 1352.5883
+      },
+      "total_games": 102
+     },
+     "total": {
+      "wt8": 1423.8698401480467,
+      "original_wt8": 1423.8698401480467,
+      "interaction": 1797.2403493813079,
+      "killsContributionPercentage": 55.84147343068342,
+      "killsVsOtherCategoriesAverageGap": 25.835621806034787,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 0.4774557,
+       "position": 0.50819004,
+       "win": 0.49028078,
+       "score": 2268.9373
+      },
+      "total_games": 463
+     }
+    },
+    "tank_arcade": {
+     "total": {
+      "wt8": 1359.4449982800468,
+      "original_wt8": 1359.4449982800468,
+      "interaction": 1670.8658900302028,
+      "killsContributionPercentage": 46.70649221375675,
+      "killsVsOtherCategoriesAverageGap": 12.751798671214416,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 1.2481203,
+       "position": 0.6200893,
+       "win": 0.49107143,
+       "score": 1575.5625
+      },
+      "total_games": 112
+     }
+    },
+    "tank_realistic": {
+     "monthly": {
+      "wt8": 1273.1557012580954,
+      "original_wt8": 1273.1557012580954,
+      "interaction": 1509.14271859552,
+      "killsContributionPercentage": 48.49846201329795,
+      "killsVsOtherCategoriesAverageGap": 15.025859537904992,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 1.1485944,
+       "position": 0.5449298,
+       "win": 0.55263156,
+       "score": 1274.7982
+      },
+      "total_games": 114
+     },
+     "total": {
+      "wt8": 1429.1519102078946,
+      "original_wt8": 1429.1519102078946,
+      "interaction": 1830.334276676685,
+      "killsContributionPercentage": 48.672228902674746,
+      "killsVsOtherCategoriesAverageGap": 13.247888932872513,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 1.0632744,
+       "position": 0.5953899,
+       "win": 0.49344787,
+       "score": 1245.4901
+      },
+      "total_games": 6868
+     }
+    },
+    "tank_simulation": {
+     "total": {
+      "wt8": 1232.531397948906,
+      "original_wt8": 1232.531397948906,
+      "interaction": 1406.6500665590881,
+      "killsContributionPercentage": 0,
+      "killsVsOtherCategoriesAverageGap": 0,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 0.94866073,
+       "position": 0.57178664,
+       "win": 0.5377778,
+       "score": 973.2178
+      },
+      "total_games": 225
+     }
+    }
+   }
+  },
+  {
+   "name": "S0kaBlyat",
+   "id": "175840227",
+   "joinDate": 1780663929,
+   "role": "4",
+   "activity": {
+    "periodActivity": {
+     "20743": 20,
+     "20737": 15
+    },
+    "current": 0,
+    "total": 35
+   },
+   "rating": 0,
+   "sr1rating": {}
+  },
+  {
+   "name": "Oyuasx",
+   "id": "136223013",
+   "joinDate": 1765305111,
+   "role": "4",
+   "activity": {
+    "periodActivity": {
+     "20761": 360,
+     "20746": 82,
+     "20743": 76,
+     "20740": 360,
+     "20737": 360,
+     "20731": 265
+    },
+    "current": 0,
+    "total": 1503
+   },
+   "rating": 0,
+   "sr1rating": {
+    "air_realistic": {
+     "total": {
+      "wt8": 1076.7148668439715,
+      "original_wt8": 1076.7148668439715,
+      "interaction": 1077.5762445229523,
+      "killsContributionPercentage": 36.5317956721585,
+      "killsVsOtherCategoriesAverageGap": -16.79715845288238,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 0.5353053,
+       "position": 0.5713781,
+       "win": 0.43142858,
+       "score": 888.7181
+      },
+      "total_games": 1050
+     },
+     "monthly": {
+      "requiresNormalBattles": true,
+      "general_stats": {
+       "kills": -1.0,
+       "position": -1.0,
+       "win": -1.0,
+       "score": -1.0
+      },
+      "total_games": 69
+     }
+    },
+    "air_simulation": {
+     "total": {
+      "wt8": 1204.6118772394998,
+      "original_wt8": 1204.6118772394998,
+      "interaction": 1342.174161481002,
+      "killsContributionPercentage": 44.1998810078445,
+      "killsVsOtherCategoriesAverageGap": -2.7800315746101703,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 0.31428573,
+       "position": 0.5240472,
+       "win": 0.6509434,
+       "score": 1803.151
+      },
+      "total_games": 106
+     }
+    },
+    "tank_realistic": {
+     "total": {
+      "wt8": 1356.7675176396983,
+      "original_wt8": 1356.7675176396983,
+      "interaction": 1588.8868888919021,
+      "killsContributionPercentage": 40.381543360339535,
+      "killsVsOtherCategoriesAverageGap": -16.319304914431626,
+      "isSuspicious": false,
+      "suspiciousReason": null,
+      "general_stats": {
+       "kills": 0.8403351,
+       "position": 0.6244124,
+       "win": 0.5574487,
+       "score": 1531.4403
+      },
+      "total_games": 2289
+     }
+    }
+   }
+  }
+ ],
+ "history": [
+  {
+   "action": "Joined",
+   "playerName": "the-maestro",
+   "date": 1765303798,
+   "initiatorName": null,
+   "initiatorId": null
+  },
+  {
+   "action": "Joined",
+   "playerName": "Alphaツ#1",
+   "date": 1765304149,
+   "initiatorName": "the-maestro",
+   "initiatorId": "149709052"
+  },
+  {
+   "action": "Joined",
+   "playerName": "Oyuasx",
+   "date": 1765305111,
+   "initiatorName": "Marston86",
+   "initiatorId": "161582029"
+  },
+  {
+   "action": "Joined",
+   "playerName": "S0kaBlyat",
+   "date": 1780663929,
+   "initiatorName": "S0kaBlyat",
+   "initiatorId": "175840227"
+  }
+ ]
+}

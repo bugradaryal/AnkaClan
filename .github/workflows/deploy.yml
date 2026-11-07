@@ -1,0 +1,80 @@
+name: Import data and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 3 * * *"   # once a day
+  workflow_dispatch:       # "Run workflow" button
+
+permissions:
+  contents: write   # lets the job commit the imported data
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - run: npm ci
+      - run: npm test
+
+      # 1) A StatShark JSON file saved by hand into frontend/data-inbox/ is imported: latest data + a new snapshot.
+      - name: Import StatShark file (if present)
+        run: |
+          if [ -f data-inbox/anka_squadron.json ]; then
+            node scripts/import-statshark.mjs data-inbox/anka_squadron.json
+          else
+            echo "No file in data-inbox; keeping the data that is already in the repository."
+          fi
+
+      # 2) At most once per 24 hours: one plain request to StatShark. It sends no tokens and does not try to pass the
+      #    Cloudflare/Turnstile check; if StatShark refuses, the existing data stays and the log shows a warning.
+      - name: Try StatShark (once per 24 hours)
+        run: node scripts/fetch-statshark.mjs
+
+      - name: Commit the imported data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          if ! git diff --cached --quiet; then
+            git commit -m "data: update StatShark squad data"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_BASE: ${{ vars.VITE_BASE }}
+          VITE_SQUADRON_NAME: ${{ vars.SQUADRON_NAME }}
+          VITE_DISCORD_URL: ${{ vars.DISCORD_URL }}
+
+      # GitHub Pages has no URL rewriting; this makes /stats work when opened directly.
+      - run: cp dist/index.html dist/404.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
