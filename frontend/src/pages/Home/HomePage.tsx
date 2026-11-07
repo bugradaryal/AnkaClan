@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className="relative z-10 flex flex-col items-center text-center">
           <motion.div {...reveal(0)}><Emblem className="h-20 w-20" /></motion.div>
           <motion.h1 {...reveal(1)} className="mt-6 font-display text-6xl font-extrabold leading-none tracking-tight sm:text-8xl">
-            Anka Klanına Hoşgeldin
+            {site.communityName} Ailesine Hoşgeldin
           </motion.h1>
           <motion.p
   {...reveal(2)}
