@@ -13,7 +13,7 @@ const CACHE_TTL_MS = 24 * 60 * 60 * 1000
 const NEWS_URL = 'https://warthunder.com/en/news'
 const NEWS_PROXY_URL = 'https://r.jina.ai/http://warthunder.com/en/news'
 
-function readCache(): { news: WarThunderNews[]; fetchedAt: number } | null {
+export function readNewsCache(): { news: WarThunderNews[]; fetchedAt: number } | null {
   try {
     const cached = localStorage.getItem(CACHE_KEY)
     if (!cached) return null
@@ -38,7 +38,7 @@ function writeCache(news: WarThunderNews[]) {
 }
 
 export async function fetchWarThunderNews(force = false): Promise<WarThunderNews[]> {
-  const cached = readCache()
+  const cached = readNewsCache()
   if (!force && cached && Date.now() - cached.fetchedAt < CACHE_TTL_MS && cached.news.length > 0) {
     return cached.news
   }
@@ -138,19 +138,26 @@ export async function fetchWarThunderNews(force = false): Promise<WarThunderNews
 }
 
 export function useWarThunderNews() {
-  const [news, setNews] = useState<WarThunderNews[]>([])
-  const [loading, setLoading] = useState(true)
+  const cached = readNewsCache()
+  const [news, setNews] = useState<WarThunderNews[]>(cached?.news ?? [])
+  const [loading, setLoading] = useState(!cached)
+  const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState(false)
 
   const load = async (force = false) => {
-    setLoading(true)
+    const savedNews = readNewsCache()
+    if (savedNews) setNews(savedNews.news)
+
+    setLoading(!savedNews)
+    setRefreshing(Boolean(savedNews) || force)
     setError(false)
     try {
       setNews(await fetchWarThunderNews(force))
     } catch {
-      setError(true)
+      if (!savedNews) setError(true)
     } finally {
       setLoading(false)
+      setRefreshing(false)
     }
   }
 
@@ -158,5 +165,5 @@ export function useWarThunderNews() {
     void load()
   }, [])
 
-  return { news, loading, error, reload: () => load(true) }
+  return { news, loading, refreshing, error, reload: () => load(true) }
 }

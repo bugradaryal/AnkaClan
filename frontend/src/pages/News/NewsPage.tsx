@@ -3,9 +3,12 @@ import { Navbar } from '../../components/layout/Navbar'
 import { Footer } from '../../components/layout/Footer'
 import { Button } from '../../components/ui/Button'
 import { useWarThunderNews } from '../../features/news/useWarThunderNews'
+import { useState } from 'react'
 
 export default function NewsPage() {
-  const { news, loading, error, reload } = useWarThunderNews()
+  const { news, loading, refreshing, error, reload } = useWarThunderNews()
+  const [visibleCount, setVisibleCount] = useState(4)
+  const visibleNews = news.slice(0, visibleCount)
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-wine-900 via-ink via-[40%] to-ink">
@@ -19,10 +22,10 @@ export default function NewsPage() {
           <button
             type="button"
             onClick={() => void reload()}
-            disabled={loading}
+            disabled={loading || refreshing}
             className="shrink-0 border border-wine-400 px-4 py-2 text-sm font-bold text-bone transition-colors hover:bg-wine-700 disabled:cursor-wait disabled:opacity-50"
           >
-            {loading ? 'Yükleniyor...' : 'Yenile'}
+            {loading || refreshing ? 'Yükleniyor...' : 'Yenile'}
           </button>
         </div>
 
@@ -42,7 +45,7 @@ export default function NewsPage() {
 
         {news.length > 0 && (
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {news.map((item) => (
+            {visibleNews.map((item) => (
               <motion.a
                 key={item.url}
                 href={item.url}
@@ -73,8 +76,20 @@ export default function NewsPage() {
           </div>
         )}
 
+        {visibleCount < news.length && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((count) => count + 4)}
+              className="border border-wine-400 px-6 py-3 font-display text-lg font-bold transition-colors hover:bg-wine-700"
+            >
+              Daha Fazla Göster
+            </button>
+          </div>
+        )}
+
         <div className="mt-8 flex justify-center">
-          <Button href="https://warthunder.com/en/news">Daha Fazla Haber</Button>
+          <Button href="https://warthunder.com/en/news">War Thunder Haberleri</Button>
         </div>
       </main>
       <Footer />
