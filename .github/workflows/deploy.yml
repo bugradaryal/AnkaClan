@@ -2,7 +2,7 @@ name: Import data and deploy
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   schedule:
     - cron: "23 3 * * *"   # once a day
   workflow_dispatch:       # "Run workflow" button

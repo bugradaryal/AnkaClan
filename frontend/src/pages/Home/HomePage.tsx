@@ -18,7 +18,7 @@ const reveal = (i: number) => ({
 
 export default function HomePage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-b from-ink via-ink via-[70%] to-wine-900">
       <section className="hero-bg relative flex min-h-screen items-center justify-center overflow-hidden px-5">
         <AnimatedGrid />
         <Navbar />
@@ -173,6 +173,6 @@ export default function HomePage() {
       )}
 
       <Footer />
-    </>
+    </div>
   )
 }
