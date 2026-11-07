@@ -19,7 +19,7 @@ const STALE_AFTER_HOURS = 72 // the data is refreshed by hand, so only warn when
 
 export default function StatsPage() {
   const { data: result, isPending, isError, refetch } = useSquad()
-  const [mode, setMode] = useState<string>('air_realistic')
+  const [mode, setMode] = useState<string>('tank_realistic')
   const [period, setPeriod] = useState<PeriodKey>('total')
   const [selected, setSelected] = useState<string[]>([])
   const [openId, setOpenId] = useState<string | null>(null)
