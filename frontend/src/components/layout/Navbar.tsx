@@ -15,6 +15,7 @@ export function Navbar() {
         <nav className="flex items-center gap-1">
           <NavLink to="/" end className={link}>Home</NavLink>
           <NavLink to="/stats" className={link}>İstatistikler</NavLink>
+          <NavLink to="/news" className={link}>Haberler</NavLink>
           <a href={site.discordUrl} target="_blank" rel="noopener noreferrer" className="ml-3 border border-wine-400 px-4 py-1.5 text-sm hover:bg-wine-700">
             Discord
           </a>
