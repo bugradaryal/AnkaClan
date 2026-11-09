@@ -1,5 +1,5 @@
 {
- "lastAttemptAt": "2026-11-08T10:35:07.607Z",
+ "lastAttemptAt": "2026-11-09T11:49:03.323Z",
  "outcome": "blocked",
  "httpStatus": 403,
  "message": "StatShark answered HTTP 403 (it requires a browser verification). Nothing was changed."
