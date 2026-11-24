@@ -15,7 +15,7 @@ import { formatAgo, formatDate, formatDateTime, formatNumber } from '../../utils
 
 const CompareChart = lazy(() => import('../../features/charts/CompareChart'))
 const MAX_COMPARE = 4
-const STALE_AFTER_HOURS = 72 // the data is refreshed by hand, so only warn when it is clearly old
+const STALE_AFTER_HOURS = 24 // the data is refreshed by hand, so only warn when it is clearly old
 
 export default function StatsPage() {
   const { data: result, isPending, isError, refetch } = useSquad()
