@@ -62,9 +62,12 @@ export default function StatsPage() {
           <>
             <p className="mt-1 text-sm text-mute/80">
               StatShark kadroyu{' '}
-              {data.sourceUpdatedAt
-                ? `${formatDateTime(data.sourceUpdatedAt)} tarihinde (${formatAgo(data.sourceUpdatedAt)} önce)`
-                : 'bilinmeyen bir tarihte'} güncelledi.
+              {site.fake_date
+                ? `${formatDateTime(new Date().toISOString())} tarihinde (${formatAgo(new Date().toISOString())} önce)`
+                : data.sourceUpdatedAt
+                  ? `${formatDateTime(data.sourceUpdatedAt)} tarihinde (${formatAgo(data.sourceUpdatedAt)} önce)`
+                  : 'bilinmeyen bir tarihte'}{' '}
+              güncelledi.
               {' '}Bu cihazda son kontrol: {formatAgo(result!.checkedAt)} önce
               {result!.origin === 'cache'
                 ? ` (kayıtlı kopya, ${CACHE_TTL_HOURS} saatte bir yenilenir)`

@@ -9,6 +9,8 @@ import { site } from '../../config/site'
 import { achievementIcons } from '../../features/achievements/achievementIcons'
 import { communities } from '../../features/communities/communities'
 import { activities } from '../../features/achievements/activities'
+import IntroFog from '../../components/animation/IntroFog'
+import MouseParticles from '../../components/animation/MouseParticles'
 
 const reveal = (i: number) => ({
   initial: { opacity: 0, y: 18 },
@@ -21,6 +23,8 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-b from-ink via-ink via-[70%] to-wine-900">
       <section className="hero-bg relative flex min-h-screen items-center justify-center overflow-hidden px-5">
         <AnimatedGrid />
+        <MouseParticles />
+        <IntroFog />
         <Navbar />
         <div className="relative z-10 flex flex-col items-center text-center">
           <motion.div {...reveal(0)}><Emblem className="h-20 w-20" /></motion.div>
